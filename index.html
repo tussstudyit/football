@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071712">
+  <meta name="description" content="Đặt sân bóng đá nhanh chóng, tìm đội giao hữu và theo dõi lịch thi đấu tại Sân Nhà.">
+  <title>Sân Nhà — Đặt sân & giao hữu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" data-view="home" aria-label="Sân Nhà - Trang chủ">
+      <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 28 7v8c0 7.2-4.8 12.2-12 15C8.8 27.2 4 22.2 4 15V7l12-5Z" fill="currentColor"/><path d="M16 7v18M8 15h16M11.5 9.5l9 13M20.5 9.5l-9 13" fill="none" stroke="#102b1d" stroke-width="1.5" opacity=".8"/></svg></span>
+      <span class="brand-copy"><strong>SÂN NHÀ</strong><small>FOOTBALL COMMUNITY</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <button class="nav-link active" data-view="home">Trang chủ</button>
+      <button class="nav-link" data-view="booking">Đặt sân</button>
+      <button class="nav-link" data-view="friendly">Giao hữu</button>
+      <button class="nav-link" data-view="profile">Hồ sơ</button>
+      <button class="nav-link admin-link hidden" data-view="admin">Quản lý</button>
+    </nav>
+    <div class="top-actions">
+      <span id="apiBadge" class="api-badge"><i></i> Đang kết nối hệ thống</span>
+      <button id="accountButton" class="account-button" data-action="auth"><span class="avatar mini">?</span><span class="account-label">Đăng nhập</span></button>
+    </div>
+    <button class="mobile-menu" data-action="mobile-menu" aria-label="Mở menu">☰</button>
+  </header>
+
+  <main id="viewRoot" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home" data-view="home"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 28 7v8c0 7.2-4.8 12.2-12 15C8.8 27.2 4 22.2 4 15V7l12-5Z" fill="currentColor"/><path d="M16 7v18M8 15h16M11.5 9.5l9 13M20.5 9.5l-9 13" fill="none" stroke="#102b1d" stroke-width="1.5" opacity=".8"/></svg></span><span class="brand-copy"><strong>SÂN NHÀ</strong><small>ĐÁ BÓNG VUI HƠN</small></span></a>
+    <p>Kết nối sân bóng, kết nối đồng đội.</p>
+    <span>© 2026 Sân Nhà</span>
+  </footer>
+
+  <dialog id="appDialog" class="app-dialog"><div id="dialogContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="static/app.js" defer></script>
+</body>
+</html>
